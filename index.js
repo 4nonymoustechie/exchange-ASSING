@@ -5,44 +5,44 @@ const ngn = document.querySelector('.ngnbtn')
 const forbtt = document.querySelector('.btn')
 
 const forConvert = async() => {
-const forApi =   await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_uaXdDC3aZvNuD4TPBIaSn8Y0oyzV7PryRxsfYuru")
+const forApi =   await fetch("https://api.frankfurter.app/latest?from=USD")
 
 const convertAndRead  =  await  forApi.json()
 
-console.dir(convertAndRead)
-//console.log(convertAndRead.data.ZAR.value)
+console.log(convertAndRead.rates)
 
-return convertAndRead.data.NGN.value
+return convertAndRead.rates.ZAR
 
 }
 
+
 const forConverting = async() => {
-    const forApis =   await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_uaXdDC3aZvNuD4TPBIaSn8Y0oyzV7PryRxsfYuru")
+    const forApis =   await fetch("https://api.frankfurter.app/latest?from=ZAR")
     
     const convertAndReadIt  =  await  forApis.json()
     
-    console.dir(convertAndReadIt)
-    //console.log(convertAndRead.data.ZAR.value)
+    console.log(convertAndReadIt)
+
     
-    return(convertAndReadIt.data.NGN.value)
+    return(convertAndReadIt.rates.USD) 
     
     }
 
 
 
 
-ngn.addEventListener('click', async() =>{
+usd.addEventListener('click', async() =>{
 forbtt.addEventListener('click', async () => {
 
     let forNgn = await forConvert()
     
 
-document.querySelector('h1').textContent =   forInp.value / forNgn
+document.querySelector('h1').textContent =   forInp.value * forNgn
 
 } )
  
 })
-usd.addEventListener('click', async() => {
+ngn.addEventListener('click', async() => {
     forbtt.addEventListener('click', async() => {
 
         let forUsd = await forConverting()

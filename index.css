@@ -1,22 +1,63 @@
 body{
     background-image: url(./background-1086840_1280.webp);
+    align-items: center;
 }
+
+
 
 
 
 .forchange{
-    display: block;
-    align-items: center;
-    justify-content: center;
-   background-color: black;
-   gap: 20px;
- 
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(255, 255, 255);
+   gap: 30px;
+   color: black;
+   height: 350px;
+   width: 400px;
+   margin-left: 350px;
+   margin-top: 150px;
+   flex-direction: column;
 }
 
 .inputer{
     display: block;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 50px;
+    padding: left 50px; ;
 }
 .radioblock{
-    color: white;
+    /* margin-left: 20px; */
+    align-items: center;
+    font: 1.3em ;
+    font-family: cursive;
+
 
 }
+.btn{
+    
+    width: 150px;
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    /* margin-left: 20px; */
+    font-size: 1em ;
+    font-family: cursive;
+    border : solid 2px blue ;
+    transition: transform .2s;
+
+}
+
+  
+  .btn:hover {
+    transform: scale(1.5);
+  }
+
+  h2{
+    color: blue;
+    font-family: cursive;
+    font-size: 20px;
+  }
